@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 @Data
@@ -15,5 +16,5 @@ import java.util.Collection;
 public class ApiException extends RuntimeException {
     private final HttpStatus status;
     private final String message;
-    private Collection<?> errors;
+    private Collection<?> errors = new ArrayList<>();
 }
